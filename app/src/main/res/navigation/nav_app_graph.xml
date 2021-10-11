@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app_graph"
+    app:startDestination="@id/fruitFragment">
+
+    <fragment
+        android:id="@+id/fruitFragment"
+        android:name="com.inspiredcoda.cookbook.presentation.FruitFragment"
+        android:label="FruitFragment"
+        tools:layout="@layout/fragment_fruit">
+        <action
+            android:id="@+id/action_fruitFragment_to_fruitDetailsFragment"
+            app:destination="@id/fruitDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fruitDetailsFragment"
+        android:name="com.inspiredcoda.cookbook.presentation.FruitDetailsFragment"
+        android:label="FruitDetailsFragment"
+        tools:layout="@layout/fragment_fruit_details">
+
+        <argument
+            android:name="fruit"
+            app:argType="com.inspiredcoda.cookbook.data.response.FruitData" />
+
+    </fragment>
+
+
+</navigation>
